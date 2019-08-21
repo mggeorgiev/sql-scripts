@@ -11,7 +11,7 @@ AS
     DECLARE @fileName VARCHAR(256) -- filename for backup 
     DECLARE @fileDate VARCHAR(20) -- used for file name 
 
-    SET @path = '/mssql/' 
+    SET @path = '/var/opt/mssql/data/' 
 
     SELECT @fileDate = CONVERT(VARCHAR(20),GETDATE(),112) 
 

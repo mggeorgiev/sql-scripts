@@ -7,7 +7,7 @@
 -- GO
 
 -- DROP USER IF EXISTS ec_admin;
--- DROP LOGIN ec_admin;
+-- DROP LOGIN IF EXISTS ec_admin;
 -- Create a new database called 'ec-th'
 -- Connect to the 'master' database to run this snippet
 USE master
@@ -30,10 +30,18 @@ CREATE LOGIN ec_admin
 GO  
 
 -- Creates a database user for the login created above.  
-CREATE USER ec_admin FOR LOGIN ec_admin;  
-GO 
-
-
+USE [ec-th]
+GO
+CREATE USER [ec_admin] FOR LOGIN [ec_admin]
+GO
+USE [ec-th]
+GO
+ALTER ROLE [db_ddladmin] ADD MEMBER [ec_admin]
+GO
+ALTER SERVER ROLE [dbcreator] ADD MEMBER [ec_admin]
+GO
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [ec_admin]
+GO
 
 -- Create User ec_admin For Login ec_admin with Default_Schema= [dbo];
 -- go

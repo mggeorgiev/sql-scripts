@@ -9,15 +9,15 @@ GO
 -- Creates a database user for the login created above.  
 USE [covid19]
 GO
-CREATE USER [covid_admin] FOR LOGIN [covid_admin]
-    WITH DEFAULT_SCHEMA = [covid19];  
+CREATE USER [covid_admin] FOR LOGIN [covid_admin];
+
 USE [covid19]
 GO
-ALTER ROLE [db_ddladmin] ADD MEMBER [ec_admin]
+ALTER ROLE [db_ddladmin] ADD MEMBER [covid_admin]
 GO
-ALTER SERVER ROLE [dbcreator] ADD MEMBER [ec_admin]
+ALTER SERVER ROLE [dbcreator] ADD MEMBER [covid_admin]
 GO
-ALTER SERVER ROLE [sysadmin] ADD MEMBER [ec_admin]
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [covid_admin]
 GO
 
 USE [covid19]
@@ -60,4 +60,8 @@ WHERE login_name = 'covid_admin'
 kill 66;
 
 -- Drop LOGIN
-DROP LOGIN covid_admin ;
+DROP LOGIN covid_admin
+GO
+
+DROP USER [covid_admin]
+GO

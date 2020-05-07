@@ -60,8 +60,11 @@ WHERE login_name = 'covid_admin'
 kill 66;
 
 -- Drop LOGIN
-DROP LOGIN covid_admin
+DROP LOGIN [covid_admin]
 GO
+
+USE [covid19]
+Go
 
 DROP USER [covid_admin]
 GO

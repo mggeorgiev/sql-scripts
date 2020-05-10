@@ -40,6 +40,8 @@ GRANT SELECT ON SCHEMA :: [dbo] TO [covid_user];
 GO
 GRANT UPDATE ON SCHEMA :: [dbo] TO [covid_user];
 GO
+GRANT DELETE ON SCHEMA :: [dbo] TO [covid_user];
+GO
 
 
 -- Select Server Principals

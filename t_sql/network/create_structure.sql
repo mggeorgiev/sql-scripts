@@ -1,11 +1,11 @@
 use data_science
 go
 
-DROP SCHEMA network;
-GO
-
-create SCHEMA network;
-go
+IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'network')
+BEGIN
+    EXEC('CREATE SCHEMA network')
+END
+Go
 
 -- Create a new table called '[Trip]' in schema '[network]'
 -- Drop the table if it already exists

@@ -34,6 +34,4 @@ AS
 
     CLOSE db_cursor 
     DEALLOCATE db_cursor
-
-
 GO

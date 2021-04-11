@@ -1,0 +1,15 @@
+/*db_recovery size*/
+show parameter db_recovery;
+
+/*Space Usage*/
+select SPACE_USED,SPACE_LIMIT from  v$recovery_file_dest;
+
+/*Available Space*/
+
+SELECT
+    NAME,
+    TO_CHAR(SPACE_LIMIT, '999,999,999,999') AS SPACE_LIMIT,
+    TO_CHAR(SPACE_LIMIT - SPACE_USED + SPACE_RECLAIMABLE,
+    '999,999,999,999') AS SPACE_AVAILABLE,
+    ROUND((SPACE_USED - SPACE_RECLAIMABLE)/SPACE_LIMIT * 100, 1) AS PERCENT_FULL
+FROM V$RECOVERY_FILE_DEST;

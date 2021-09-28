@@ -1,3 +1,4 @@
+-- https://www.erikdarlingdata.com/sql-server/quick-sql-server-cpu-comparison-tests/
 CREATE OR ALTER PROCEDURE #p AS
 BEGIN
     SET NOCOUNT ON;

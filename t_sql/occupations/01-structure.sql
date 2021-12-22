@@ -108,7 +108,7 @@ GO
 CREATE TABLE [dbo].[knowledge]
 (
     [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
-    [knowledge] NVARCHAR(50) NOT NULL,
+    [knowledge] NVARCHAR(100) NOT NULL,
     [Description] NVARCHAR(250) NOT NULL
     -- Specify more columns here
 );

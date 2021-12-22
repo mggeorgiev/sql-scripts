@@ -1,3 +1,5 @@
+/*RAW DAtA*/
+
 SELECT TOP (1000) [Departure]
       ,[BusName]
       ,[Destination]
@@ -7,6 +9,8 @@ SELECT TOP (1000) [Departure]
 DECLARE @departure AS VARCHAR(255) = 'San Francisco';
 DECLARE @busname as VARCHAR(255) = 'Bus 1';
 DECLARE @maxlevel as INT = 5;
+
+/*Standard SEARCH and level*/
 
 WITH cte_route AS (
     SELECT       
@@ -31,9 +35,12 @@ WITH cte_route AS (
      AND o.lvl<@maxlevel
 )
 
+
 SELECT 
     * 
     FROM cte_route
     ORDER BY lvl 
     OPTION (MAXRECURSION 100);
 GO
+
+/*Standard SEARCH and CYCLE clauses*/

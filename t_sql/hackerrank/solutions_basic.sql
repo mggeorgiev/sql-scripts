@@ -1,0 +1,27 @@
+--Revising the Select Query I
+SELECT * FROM CITY WHERE POPULATION > 100000 AND COUNTRYCODE = 'USA';
+GO
+
+--Revising the Select Query II
+SELECT 
+    [NAME] 
+    FROM CITY 
+    WHERE POPULATION > 120000 
+    AND COUNTRYCODE = 'USA';
+GO
+
+--Select All
+SELECT * FROM CITY
+GO
+
+--Select by ID
+SELECT * FROM CITY WHERE Id=1661
+GO
+
+--Japanese Cities' Attributes
+SELECT * FROM CITY WHERE COUNTRYCODE='JPN';
+GO
+
+--Japanese Cities' Names
+SELECT [NAME] FROM CITY WHERE COUNTRYCODE='JPN';
+GO

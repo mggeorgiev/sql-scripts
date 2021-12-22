@@ -79,7 +79,7 @@ GO
 CREATE TABLE [dbo].[work_activities]
 (
     [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
-    [Work_activity] NVARCHAR(50) NOT NULL,
+    [Work_activity] NVARCHAR(100) NOT NULL,
     [Description] NVARCHAR(250) NOT NULL
     -- Specify more columns here
 );

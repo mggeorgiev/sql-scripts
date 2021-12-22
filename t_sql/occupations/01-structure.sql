@@ -98,3 +98,18 @@ CREATE TABLE [dbo].[detailed_work_activities]
     -- Specify more columns here
 );
 GO
+
+-- Create a new table called '[knowledge]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[knowledge]', 'U') IS NOT NULL
+DROP TABLE [dbo].[work_activities]
+GO
+-- Create the table in the specified schema
+CREATE TABLE [dbo].[knowledge]
+(
+    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [knowledge] NVARCHAR(50) NOT NULL,
+    [Description] NVARCHAR(250) NOT NULL
+    -- Specify more columns here
+);
+GO

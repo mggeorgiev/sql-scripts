@@ -30,15 +30,11 @@ INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Confer with data processing o
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Confer with systems analysts, engineers, programmers and others to design systems and to obtain information on project limitations and capabilities, performance requirements and interfaces.');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Consult with customers or other departments on project status, proposals, or technical issues, such as software system design or maintenance.');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Write, update, and maintain computer programs or software packages to handle specific jobs such as tracking inventory, storing or retrieving data, or controlling other equipment');
-
-
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Automate the development process');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Use different hosting services that Azure offers');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Build modern applications with a cloud-native architecture');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Connect application to data and include AI capabilities');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Use Azure services and products for app development');
-
-
 
 /*knowledge*/
 
@@ -50,12 +46,11 @@ INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('Customer 
 INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('English Language', 'Knowledge of the structure and content of the English language including the meaning and spelling of words, rules of composition, and grammar.');
 INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('Mathematics', 'Knowledge of arithmetic, algebra, geometry, calculus, statistics, and their applications.');
 INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('Telecommunications', 'Knowledge of transmission, broadcasting, switching, control, and operation of telecommunications systems.');
-
 INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('Design', 'Knowledge of design techniques, tools, and principles involved in production of precision technical plans, blueprints, drawings, and models.');
 INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('Engineering and Technology', 'Knowledge of the practical application of engineering science and technology. This includes applying principles, techniques, procedures, and equipment to the design and production of various goods and services.');
 
-
 /* skills*/
+
 INSERT INTO occupations.dbo.skills ([Name], [Description]) VALUES( 'Active Learning', 'Understanding the implications of new information for both current and future problem-solving and decision-making.');
 INSERT INTO occupations.dbo.skills ([Name], [Description]) VALUES( 'Active Listening', 'Giving full attention to what other people are saying, taking time to understand the points being made, asking questions as appropriate, and not interrupting at inappropriate times.');
 INSERT INTO occupations.dbo.skills ([Name], [Description]) VALUES( 'Critical Thinking', 'Using logic and reasoning to identify the strengths and weaknesses of alternative solutions, conclusions, or approaches to problems.');
@@ -70,6 +65,7 @@ INSERT INTO occupations.dbo.skills ([Name], [Description]) VALUES( 'Systems Eval
 INSERT INTO occupations.dbo.skills ([Name], [Description]) VALUES( 'Quality Control Analysis', 'Conducting tests and inspections of products, services, or processes to evaluate quality or performance.');
 
 /*abilities*/
+
 INSERT INTO occupations.dbo.abilities ([Name],[Description]) VALUES( 'Deductive Reasoning', 'The ability to apply general rules to specific problems to produce answers that make sense.See more occupations related to this ability.');
 INSERT INTO occupations.dbo.abilities ([Name],[Description]) VALUES( 'Information Ordering', 'The ability to arrange things or actions in a certain order or pattern according to a specific rule or set of rules (e.g., patterns of numbers, letters, words, pictures, mathematical operations).See more occupations related to this ability.');
 INSERT INTO occupations.dbo.abilities ([Name],[Description]) VALUES( 'Problem Sensitivity', 'The ability to tell when something is wrong or is likely to go wrong. It does not involve solving the problem, only recognizing that there is a problem.See more occupations related to this ability.');
@@ -89,7 +85,6 @@ INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Gett
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Communicating with Supervisors, Peers, or Subordinates', 'Providing information to supervisors, co-workers, and subordinates by telephone, in written form, e-mail, or in person.');
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Thinking Creatively', 'Developing, designing, or creating new applications, ideas, relationships, systems, or products, including artistic contributions.');
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Updating and Using Relevant Knowledge', 'Keeping up-to-date technically and applying new knowledge to your job.');
-
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Host application on Azure App Service', 'Scaling, Deployment slots, Continuous deployment, Connect to on-premises resources, Custom domains and App Service certificates.');
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Host application on Azure Spring Cloud', '.');
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Host part of an application on Azure Functions', 'Use Input and output bindings connect your function code to other services.');
@@ -99,15 +94,22 @@ INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Depl
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use events and messages in application', 'Decouple applications by using Service Bus, Event hubs and Event grids, Azure SignalR Service.');
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use Azure Communication Services', 'Add communication workflows to apps with SDKs and APIs.');
 INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Improve application performance by using Azure services', 'Azure Traffic Manager, Azure Front Door, Azure Content Delivery Network.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use Azure core services', 'Azure virtual machines, web apps, storage, networking.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use Azure high availability and scalability options', 'High availability and redundancy, Load-balancing applications, Applications that scale, Managing network traffic and routing.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use Azure Serverless computing', 'Azure messaging platforms, Azure logic app, Azure function app.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use Azure backup, recovery, and replication', 'Azure Backup, Azure Site Recovery.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Use Azure containers', 'Azure Container Instances, Azure Kubernetes Service.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES( 'Scale applications on Azure', 'Azure Virtual machine scale sets.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES('Load-balancing applications', 'Creating and configuring VMs with the load balancer.');
+INSERT INTO occupations.dbo.WorkActivities ([Name], [Description]) VALUES('Use Azure Storage', 'VM storage, Blob storage, Table storage, Queue storage.');
 
 /*DetailedWorkActivities*/
 
-INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES( 'Assess database performance.');
-INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES( 'Modify software programs to improve performance.');
-INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES( 'Implement security measures for computer or information systems.');
-INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES( 'Develop computer or information security policies or procedures.');
-INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES( 'Create databases to store electronic data.');
-
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Assess database performance.');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Modify software programs to improve performance.');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Implement security measures for computer or information systems.');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Develop computer or information security policies or procedures.');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Create databases to store electronic data.');
 INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Coordinate software or hardware installation.');
 INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Monitor computer system performance to ensure proper operation.');
 INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Test software performance.');
@@ -127,6 +129,45 @@ INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Identify inf
 INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Analyze project data to determine specifications or requirements.');
 INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Supervise information technology personnel.');
 INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Apply mathematical principles or statistical approaches to solve problems in scientific or applied fields.');
+
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Create a virtual machine');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Create an Azure Web Apps');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Work with Azure Storage');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating and using virtual networks and subnets');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Virtual network interface cards');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Public IP address and DNS resolution');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Securing and controlling traffic with network security groups');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating a network security group');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Associating a network security group with a subnet');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating network security group filtering rules');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Distributing VMs across an availability set');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating network resources across an availability zone');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating VMs in an availability zone');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating a frontend IP pool');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating and configuring health probes');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Defining traffic distribution with load-balancer rules');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Routing direct traffic with Network Address Translation rules');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Assigning groups of VMs to backend pools');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Scaling VMs vertically');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Scaling web apps vertically');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Scaling resources horizontally');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating a virtual machine scale set');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating autoscale rules');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Delegating a real domain to Azure DNS');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating Traffic Manager profiles');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Globally distributing traffic to the closest instance');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('VM boot diagnostics');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Performance metrics and alerts');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Policies and retention');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Create Backup schedules');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Restore a VM');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Storing encryption keys in Azure Key Vault');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Controlling access to vaults and keys with Azure Active Directory');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Encrypting an Azure VM');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating a single container instance');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Creating a cluster with Azure Kubernetes Services');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Azure Event Grid');
+INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Azure Event Hubs and Service Bus');
 
 /*Add Roles*/
 
@@ -151,11 +192,11 @@ INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SE
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Engineering and Technology'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'English Language'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Customer and Personal Service'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Programming'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Active Listening'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Quality Control Analysis'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Programming'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Active Listening'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Quality Control Analysis'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Written Comprehension'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Near Vision'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Oral Comprehension'));
@@ -169,24 +210,23 @@ INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES(
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Analyze project data to determine specifications or requirements.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Write computer programming code.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Modify software programs to improve performance.'));
-INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Write computer programming code.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Test software performance.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Resolve computer software problems.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Collaborate with others to resolve information technology issues.'));
 
 
-'Adding intelligence to application'
+/*'Adding intelligence to application'*/
 
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Analyze information to determine, recommend, and plan installation of a new system or modification of an existing system.'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Analyze user needs and software requirements to determine feasibility of design within time and cost constraints.'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Confer with data processing or project managers to obtain information on limitations or capabilities for data processing projects.'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Confer with systems analysts, engineers, programmers and others to design systems and to obtain information on project limitations and capabilities, performance requirements and interfaces.'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Consult with customers or other departments on project status, proposals, or technical issues, such as software system design or maintenance.'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Programming'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Active Listening'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Quality Control Analysis'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Programming'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Active Listening'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Quality Control Analysis'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Analyze project data to determine specifications or requirements.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Modify software programs to improve performance.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Software Developer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Supervise information technology personnel.'));
@@ -198,17 +238,16 @@ INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from 
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Collaborate with engineers or software developers to select appropriate design solutions or ensure the compatibility of system components.'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Identify system data, hardware, or software components required to meet user needs.'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Communicate with staff or clients to understand specific system requirements.'));
-
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Computers and Electronics'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Engineering and Technology'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'English Language'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Mathematics'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Design'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Reading Comprehension'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Active Listening'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Systems Evaluation'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Reading Comprehension'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Active Listening'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Systems Evaluation'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Problem Sensitivity'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Oral Comprehension'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Systems Engineers/Architects'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Written Comprehension'));
@@ -234,41 +273,32 @@ INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SE
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'English Language'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Mathematics'));
 INSERT INTO occupations.dbo.KnowledgeRole ([RolesId], [KnowledgesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Knowledges WHERE [Name] = 'Communications and Media'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Programming'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Operations Analysis'));
-INSERT INTO occupations.dbo.RoleSkill (RolesId, SkillsId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Reading Comprehension'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Programming'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Critical Thinking'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Complex Problem Solving'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Operations Analysis'));
+INSERT INTO occupations.dbo.RoleSkill ([RolesId], [SkillsId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.Skills where [Name] = 'Reading Comprehension'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Deductive Reasoning'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Oral Comprehension'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Near Vision'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Problem Sensitivity'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Written Comprehension'));
-
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Working with Computers'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Getting Information'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Thinking Creatively'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Updating and Using Relevant Knowledge'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Making Decisions and Solving Problems'));
-
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Design websites or web applications.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Write computer programming code.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Update website content.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Create electronic data backup to prevent loss of information.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Web Developers'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Test software performance.'));
 
-
-
-
-
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Automate the development process'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Use different hosting services that Azure offers'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Build modern applications with a cloud-native architecture'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Connect application to data and include AI capabilities'));
 INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Use Azure services and products for app development'));
-INSERT INTO occupations.dbo.RoleTasks (RolesId, TasksId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id from occupations.dbo.Tasks Where [Name] = 'Use Azure services and products for app development'));
-
-
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Host application on Azure App Service'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Host application on Azure Spring Cloud'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Host part of an application on Azure Functions'));
@@ -279,4 +309,50 @@ INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES(
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure Communication Services'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Developer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Improve application performance by using Azure services'));
 
-'Adding intelligence to application'
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure core services'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure high availability and scalability options'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure Serverless computing'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure backup, recovery, and replication'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure containers'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Scale applications on Azure'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Load-balancing applications'));
+INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Use Azure Storage'));
+
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Create a virtual machine'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Create an Azure Web Apps'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Work with Azure Storage'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating and using virtual networks and subnets'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Virtual network interface cards'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Public IP address and DNS resolution'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Securing and controlling traffic with network security groups'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating a network security group'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Associating a network security group with a subnet'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating network security group filtering rules'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Distributing VMs across an availability set'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating network resources across an availability zone'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating VMs in an availability zone'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating a frontend IP pool'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating and configuring health probes'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Defining traffic distribution with load-balancer rules'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Routing direct traffic with Network Address Translation rules'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Assigning groups of VMs to backend pools'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Scaling VMs vertically'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Scaling web apps vertically'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Scaling resources horizontally'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating a virtual machine scale set'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating autoscale rules'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Delegating a real domain to Azure DNS'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating Traffic Manager profiles'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Globally distributing traffic to the closest instance'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'VM boot diagnostics'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Performance metrics and alerts'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Policies and retention'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Create Backup schedules'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Restore a VM'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Storing encryption keys in Azure Key Vault'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Controlling access to vaults and keys with Azure Active Directory'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Encrypting an Azure VM'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating a single container instance'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating a cluster with Azure Kubernetes Services'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Grid'));
+INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Hubs and Service Bus'));

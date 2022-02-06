@@ -20,6 +20,8 @@ GO
 ALTER SERVER ROLE [sysadmin] ADD MEMBER [covid_admin]
 GO
 
+/*covid_user*/
+
 USE [covid19]
 GO
 -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  
@@ -30,8 +32,9 @@ GO
 -- Creates a database user for the login created above.  
 USE [covid19]
 GO
-CREATE USER [covid_admin] FOR LOGIN [covid_user]
+CREATE USER [covid_user] FOR LOGIN [covid_user]
     WITH DEFAULT_SCHEMA = [covid19];  
+
 USE [covid19]
 GO
 GRANT INSERT ON SCHEMA :: [dbo] TO [covid_user];
@@ -69,4 +72,17 @@ USE [covid19]
 Go
 
 DROP USER [covid_admin]
+GO
+
+-- Drop covid_user
+use master 
+go
+
+DROP LOGIN [covid_user]
+GO
+
+USE [covid19]
+Go
+
+DROP USER [covid_user]
 GO

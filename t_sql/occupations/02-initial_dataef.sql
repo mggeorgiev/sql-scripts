@@ -202,7 +202,7 @@ INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELEC
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Oral Comprehension'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Deductive Reasoning'));
 INSERT INTO occupations.dbo.AbilityRole ([RolesId], [AbilitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT [Id] FROM occupations.dbo.Abilities WHERE [Name] = 'Inductive Reasoning'));
-INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Working with Computers'));
+INSERT INTO occupations.dbo.RoleWorkActivity ([RoleId], [WorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Working with Computers'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Processing Information'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Analyzing Data or Information'));
 INSERT INTO occupations.dbo.RoleWorkActivity (RolesId, WorkActivitiesId) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.WorkActivities where [Name] = 'Getting Information'));
@@ -213,7 +213,6 @@ INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkAc
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Test software performance.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Resolve computer software problems.'));
 INSERT INTO occupations.dbo.DetailedWorkActivityRole ([RolesId], [DetailedWorkActivitiesId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Computer Programmer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Collaborate with others to resolve information technology issues.'));
-
 
 /*'Adding intelligence to application'*/
 

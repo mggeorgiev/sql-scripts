@@ -178,6 +178,7 @@ INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Developer');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Engineer');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Architect');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Web Developers');
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('HashiCorp Terraform Cloud Engineer');
 
 /*assign Roles to objects*/
 
@@ -353,3 +354,5 @@ INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkAct
 INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Creating a cluster with Azure Kubernetes Services'));
 INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Grid'));
 INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Hubs and Service Bus'));
+
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('HashiCorp Terraform Cloud Engineer');

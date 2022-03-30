@@ -1,49 +1,49 @@
-USE [covid19]
+USE [master]
 GO
 
 -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  
-CREATE LOGIN covid_admin   
+CREATE LOGIN agent_job   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 GO  
 
 -- Creates a database user for the login created above.  
-USE [covid19]
+USE [master]
 GO
-CREATE USER [covid_admin] FOR LOGIN [covid_admin];
+CREATE USER [agent_job] FOR LOGIN [agent_job];
 
-USE [covid19]
+USE [master]
 GO
-ALTER ROLE [db_ddladmin] ADD MEMBER [covid_admin]
+ALTER ROLE [db_ddladmin] ADD MEMBER [agent_job]
 GO
-ALTER SERVER ROLE [dbcreator] ADD MEMBER [covid_admin]
+ALTER SERVER ROLE [dbcreator] ADD MEMBER [agent_job]
 GO
-ALTER SERVER ROLE [sysadmin] ADD MEMBER [covid_admin]
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [agent_job]
 GO
 
 /*covid_user*/
 
-USE [covid19]
+USE [master]
 GO
 -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  
-CREATE LOGIN covid_user   
+CREATE LOGIN agent_job   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 GO  
 
 -- Creates a database user for the login created above.  
-USE [covid19]
+USE [master]
 GO
-CREATE USER [covid_user] FOR LOGIN [covid_user]
+CREATE USER [agent_job] FOR LOGIN [agent_job]
     WITH DEFAULT_SCHEMA = [covid19];  
 
-USE [covid19]
+USE [master]
 GO
-GRANT INSERT ON SCHEMA :: [dbo] TO [covid_user];
+GRANT INSERT ON SCHEMA :: [dbo] TO [agent_job];
 GO
-GRANT SELECT ON SCHEMA :: [dbo] TO [covid_user];
+GRANT SELECT ON SCHEMA :: [dbo] TO [agent_job];
 GO
-GRANT UPDATE ON SCHEMA :: [dbo] TO [covid_user];
+GRANT UPDATE ON SCHEMA :: [dbo] TO [agent_job];
 GO
-GRANT DELETE ON SCHEMA :: [dbo] TO [covid_user];
+GRANT DELETE ON SCHEMA :: [dbo] TO [agent_job];
 GO
 
 

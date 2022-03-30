@@ -28,3 +28,88 @@ CREATE TABLE [dbo].[skills]
     -- Specify more columns here
 );
 GO
+
+use occupations
+GO
+
+-- Create a new table called '[Abilities]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[abilities]', 'U') IS NOT NULL
+DROP TABLE [dbo].[abilities]
+GO
+-- Create the table in the specified schema
+CREATE TABLE [dbo].[abilities]
+(
+    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [Ability] NVARCHAR(50) NOT NULL,
+    [Description] NVARCHAR(250) NOT NULL
+    -- Specify more columns here
+);
+GO
+
+use occupations
+GO
+
+-- Create a new table called '[tasks]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[tasks]', 'U') IS NOT NULL
+DROP TABLE [dbo].[tasks]
+GO
+-- Create the table in the specified schema
+CREATE TABLE [dbo].[tasks]
+(
+    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [Task] NVARCHAR(250) NOT NULL,
+    -- Specify more columns here
+);
+GO
+
+use occupations
+GO
+
+use occupations
+GO
+
+-- Create a new table called '[work_activities]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[work_activities]', 'U') IS NOT NULL
+DROP TABLE [dbo].[work_activities]
+GO
+-- Create the table in the specified schema
+CREATE TABLE [dbo].[work_activities]
+(
+    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [Work_activity] NVARCHAR(100) NOT NULL,
+    [Description] NVARCHAR(250) NOT NULL
+    -- Specify more columns here
+);
+GO
+
+-- Create a new table called '[detailed_work_activities]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[detailed_work_activities]', 'U') IS NOT NULL
+DROP TABLE [dbo].[detailed_work_activities]
+GO
+-- Create the table in the specified schema
+CREATE TABLE [dbo].[detailed_work_activities]
+(
+    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [detailed_work_activity] NVARCHAR(250) NOT NULL,
+    -- Specify more columns here
+);
+GO
+
+-- Create a new table called '[knowledge]' in schema '[dbo]'
+-- Drop the table if it already exists
+IF OBJECT_ID('[dbo].[knowledge]', 'U') IS NOT NULL
+DROP TABLE [dbo].[knowledge]
+GO
+-- Create the table in the specified schema
+CREATE TABLE [dbo].[knowledge]
+(
+    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
+    [knowledge] NVARCHAR(100) NOT NULL,
+    [Description] NVARCHAR(350) NOT NULL
+    -- Specify more columns here
+);
+GO

@@ -2,22 +2,31 @@ USE [master]
 GO
 
 -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  
-CREATE LOGIN agent_job   
+CREATE LOGIN occupations_admin   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 GO  
+
+GRANT INSERT ON SCHEMA :: [dbo] TO [occupations_admin];
+GO
+GRANT SELECT ON SCHEMA :: [dbo] TO [occupations_admin];
+GO
+GRANT UPDATE ON SCHEMA :: [dbo] TO [occupations_admin];
+GO
+GRANT DELETE ON SCHEMA :: [dbo] TO [occupations_admin];
+GO
 
 -- Creates a database user for the login created above.  
 USE [master]
 GO
-CREATE USER [agent_job] FOR LOGIN [agent_job];
+CREATE USER [occupations_admin] FOR LOGIN [occupations_admin];
 
 USE [master]
 GO
-ALTER ROLE [db_ddladmin] ADD MEMBER [agent_job]
+ALTER ROLE [db_ddladmin] ADD MEMBER [occupations_admin]
 GO
-ALTER SERVER ROLE [dbcreator] ADD MEMBER [agent_job]
+ALTER SERVER ROLE [dbcreator] ADD MEMBER [occupations_admin]
 GO
-ALTER SERVER ROLE [sysadmin] ADD MEMBER [agent_job]
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [occupations_admin]
 GO
 
 /*covid_user*/
@@ -25,25 +34,25 @@ GO
 USE [master]
 GO
 -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  
-CREATE LOGIN agent_job   
+CREATE LOGIN occupations_admin   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 GO  
 
 -- Creates a database user for the login created above.  
 USE [master]
 GO
-CREATE USER [agent_job] FOR LOGIN [agent_job]
+CREATE USER [occupations_admin] FOR LOGIN [occupations_admin]
     WITH DEFAULT_SCHEMA = [master];  
 
 USE [master]
 GO
-GRANT INSERT ON SCHEMA :: [dbo] TO [agent_job];
+GRANT INSERT ON SCHEMA :: [dbo] TO [occupations_admin];
 GO
-GRANT SELECT ON SCHEMA :: [dbo] TO [agent_job];
+GRANT SELECT ON SCHEMA :: [dbo] TO [occupations_admin];
 GO
-GRANT UPDATE ON SCHEMA :: [dbo] TO [agent_job];
+GRANT UPDATE ON SCHEMA :: [dbo] TO [occupations_admin];
 GO
-GRANT DELETE ON SCHEMA :: [dbo] TO [agent_job];
+GRANT DELETE ON SCHEMA :: [dbo] TO [occupations_admin];
 GO
 
 
@@ -59,30 +68,30 @@ JOIN sys.server_principals AS member
 -- Active Users
 SELECT session_id
 FROM sys.dm_exec_sessions
-WHERE login_name = 'agent_job'
+WHERE login_name = 'occupations_admin'
 
 -- Kill Active Users
 kill 66;
 
 -- Drop LOGIN
-DROP LOGIN [agent_job]
+DROP LOGIN [occupations_admin]
 GO
 
 USE [master]
 Go
 
-DROP USER [agent_job]
+DROP USER [occupations_admin]
 GO
 
 -- Drop covid_user
 use [master] 
 go
 
-DROP LOGIN [agent_job]
+DROP LOGIN [occupations_admin]
 GO
 
 USE [master]
 Go
 
-DROP USER [agent_job]
+DROP USER [occupations_admin]
 GO

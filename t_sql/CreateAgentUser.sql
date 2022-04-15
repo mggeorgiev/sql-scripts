@@ -59,30 +59,30 @@ JOIN sys.server_principals AS member
 -- Active Users
 SELECT session_id
 FROM sys.dm_exec_sessions
-WHERE login_name = 'covid_admin'
+WHERE login_name = 'agent_job'
 
 -- Kill Active Users
 kill 66;
 
 -- Drop LOGIN
-DROP LOGIN [covid_admin]
+DROP LOGIN [agent_job]
 GO
 
-USE [covid19]
+USE [master]
 Go
 
-DROP USER [covid_admin]
+DROP USER [agent_job]
 GO
 
 -- Drop covid_user
-use master 
+use [master] 
 go
 
-DROP LOGIN [covid_user]
+DROP LOGIN [agent_job]
 GO
 
-USE [covid19]
+USE [master]
 Go
 
-DROP USER [covid_user]
+DROP USER [agent_job]
 GO

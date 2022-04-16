@@ -17,8 +17,8 @@ ALTER ROLE [db_ddladmin] ADD MEMBER [covid_admin]
 GO
 ALTER SERVER ROLE [dbcreator] ADD MEMBER [covid_admin]
 GO
-ALTER SERVER ROLE [sysadmin] ADD MEMBER [covid_admin]
-GO
+-- ALTER SERVER ROLE [sysadmin] ADD MEMBER [covid_admin]
+-- GO
 
 /*covid_user*/
 

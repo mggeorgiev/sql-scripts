@@ -6,9 +6,9 @@ GO
  
 CREATE TABLE dbo.Employees
 (
-  empid   INT         NOT NULL
+  empid INT NOT NULL
     CONSTRAINT PK_Employees PRIMARY KEY,
-  mgrid   INT         NULL     
+  mgrid INT NULL     
     CONSTRAINT FK_Employees_Employees REFERENCES dbo.Employees,
   empname VARCHAR(25) NOT NULL,
   salary  MONEY       NOT NULL,
@@ -35,8 +35,14 @@ CREATE UNIQUE INDEX idx_unc_mgrid_empid
   ON dbo.Employees(mgrid, empid)
   INCLUDE(empname, salary);
 
-DECLARE @root AS INT = 3;
-DECLARE @maxlevel AS INT = 2;
+SELECT TOP (1000) [empid]
+      ,[mgrid]
+      ,[empname]
+      ,[salary]
+  FROM [hierarchy].[dbo].[Employees]
+
+DECLARE @root AS INT = 1;
+DECLARE @maxlevel AS INT = 3;
  
 WITH C AS
 (

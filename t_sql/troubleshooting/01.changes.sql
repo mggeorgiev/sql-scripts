@@ -53,6 +53,7 @@ SELECT TOP (1000) [Id]      ,[scfg_sha1]
   FROM [dbo].[changes]
 GO
 
+create or alter view v_scfg_sha1 as 
 SELECT TOP (1000)
     [Id]      , [scfg_sha1]
 FROM [dbo].[changes]
@@ -70,3 +71,5 @@ GO
 
 select value_in_use from sys.configurations ORDER BY configuration_id ASC;
 GO
+
+select * from v_scfg_sha1

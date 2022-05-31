@@ -4,9 +4,6 @@
 exec sp_configure;
 GO
 
-select * from sys.configurations;
-GO
-
 select * from sys.databases;
 GO
 

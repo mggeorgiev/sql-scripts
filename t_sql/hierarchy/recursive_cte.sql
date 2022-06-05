@@ -34,8 +34,6 @@ WITH cte_route AS (
      WHERE o.[Destination] <> @departure
      AND o.lvl<@maxlevel
 )
-
-
 SELECT 
     * 
     FROM cte_route

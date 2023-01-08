@@ -36,6 +36,7 @@ INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Build modern applications wit
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Connect application to data and include AI capabilities');
 INSERT INTO occupations.dbo.Tasks ([Name]) VALUES('Use Azure services and products for app development');
 
+
 /*knowledge*/
 
 INSERT INTO occupations.dbo.Knowledges ([Name], [Description]) VALUES('Administrative', 'Knowledge of administrative and office procedures and systems such as word processing, managing files and records, stenography and transcription, designing forms, and workplace terminology.');
@@ -174,11 +175,15 @@ INSERT INTO occupations.dbo.DetailedWorkActivities ([Name]) VALUES('Azure Event 
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Computer Programmer');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Software Developer');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Computer Systems Engineers/Architects');
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Web Developers');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Developer');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Engineer');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Architect');
-INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Web Developers');
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Security Architect');
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('Azure Cybersecurity Architect');
 INSERT INTO occupations.dbo.[Roles] (Name) VALUES('HashiCorp Terraform Cloud Engineer');
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('HashiCorp Certified: Vault Associate');
+INSERT INTO occupations.dbo.[Roles] (Name) VALUES('HashiCorp Certified: Consul Associate');
 
 /*assign Roles to objects*/
 
@@ -355,4 +360,13 @@ INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkAct
 INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Grid'));
 INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'Azure Engineer'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Hubs and Service Bus'));
 
-INSERT INTO occupations.dbo.[Roles] (Name) VALUES('HashiCorp Terraform Cloud Engineer');
+INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'HashiCorp Certified: Consul Associate'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Hubs and Service Bus'));
+
+INSERT INTO occupations.dbo.RoleDetailedWorkActivity ([RoleId], [DetailedWorkActivityId]) VALUES((SELECT Id from occupations.dbo.[Roles] Where [Name] = 'HashiCorp Certified: Vault Associate'), (SELECT Id FROM occupations.dbo.DetailedWorkActivities WHERE [Name] = 'Azure Event Hubs and Service Bus'));
+
+
+/* Add Carrer paths*/
+
+INSERT INTO occupations.dbo.CareerPaths ([Name], [Description]) VALUES ('Seniority', 'Senior individual contributor" (IC) is a type of career destination that typically refers to a highly skilled engineer. These individuals are technical experts in their field and may even act as leaders for others, but they primarily focus on completing the work themselves rather than managing a team. They do not own their own company or work independently.');
+INSERT INTO occupations.dbo.CareerPaths ([Name], [Description]) VALUES ('Management', 'Engineering managers require a strong understanding of technical concepts and skills, but their primary responsibilities involve leading, overseeing, hiring, and mentoring other technical professionals. These management skills are also crucial and not commonly found in abundance.');
+INSERT INTO occupations.dbo.CareerPaths ([Name], [Description]) VALUES ('Independence', 'Consultant offers independent advice to the client, while a contractor follows the client''s instructions. In other words, a consultant makes decisions on their own, while a contractor is not autonomous.');

@@ -1,0 +1,12 @@
+-- rman target / nocatalog @archievelog_clean.rmn log=archievelog_clean.log
+
+connect target;
+crosscheck archivelog all;
+delete noprompt expired archivelog all;
+--For clear all archivelog
+delete archivelog all;
+
+--OR
+
+--backup device type sbt archivelog all not backed up  1 times ;
+--delete noprompt archivelog until time = 'sysdate-1' backed up 1 times to sbt ;

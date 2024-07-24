@@ -1,6 +1,12 @@
 select * from dba_profiles
 ORDER BY profile;
 
+/*Check PASSWORD_LIFE_TIME parameter by using below query :*/
+SELECT resource_name, limit
+FROM dba_profiles 
+WHERE profile = 'DEFAULT'
+AND resource_type = 'PASSWORD';
+
 /*The value in PASSWORD_LIFE_TIME has changed to 'Unlimited' so the password will never expire.*/
 ALTER PROFILE DEFAULT LIMIT PASSWORD_LIFE_TIME UNLIMITED;
 /*The value in PASSWORD_LIFE_TIME has changed to 'Unlimited' so the password will never expire.*/

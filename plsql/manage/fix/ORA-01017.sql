@@ -1,0 +1,2 @@
+sqlplus / as sysdba
+ALTER SESSION SET CONTAINER = FREEPDB1;

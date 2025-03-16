@@ -123,3 +123,139 @@ CREATE TABLE `supplier_fuels` (
   `TYPE` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`ID_BRAND`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- cars.CONSUMPTIONREPORT source
+
+CREATE OR REPLACE VIEW `cars`.`CONSUMPTIONREPORT` AS
+select
+    cars.fuel.YEAR_COL AS `year`,
+    `cars`.`fuel`.`MONTH_COL` AS `month`,
+    `cars`.`cars`.`make` AS `make`,
+    `cars`.`cars`.`model` AS `model`,
+    `cars`.`cars`.`DKN` AS `dkn`,
+    sum(`cars`.`fuel`.`AMOUNT`) AS `amount`,
+    sum(`cars`.`fuel`.`MILEAGE`) AS `mileage`,
+    round(((sum(`cars`.`fuel`.`AMOUNT`) / sum(`cars`.`fuel`.`MILEAGE`)) * 100), 2) AS `kpl`
+from
+    (`cars`.`fuel`
+join `cars`.`cars` on
+    ((`cars`.`fuel`.`ID_CAR` = `cars`.`cars`.`id_car`)))
+group by
+    `cars`.`fuel`.`YEAR_COL`,
+    `cars`.`fuel`.`MONTH_COL`,
+    `cars`.`cars`.`make`,
+    `cars`.`cars`.`model`,
+    `cars`.`cars`.`DKN`
+order by
+    `cars`.`fuel`.`YEAR_COL` desc,
+    `cars`.`fuel`.`MONTH_COL`;
+
+-- cars.MAINTENANCE_SORT source
+
+CREATE OR REPLACE
+ALGORITHM = UNDEFINED VIEW `cars`.`MAINTENANCE_SORT` AS
+select
+    `cars`.`maintenance`.`id_maintenance` AS `id_maintenance`,
+    `cars`.`cars`.`make` AS `make`,
+    `cars`.`cars`.`model` AS `model`,
+    `cars`.`cars`.`DKN` AS `DKN`,
+    `cars`.`maintenance`.`date_col` AS `date_col`,
+    `cars`.`maintenance`.`mileage` AS `mileage`,
+    `cars`.`maintenance`.`reference` AS `reference`,
+    `cars`.`maintenance`.`total` AS `total`,
+    `cars`.`maintenance`.`interval_col` AS `interval_col`,
+    `cars`.`maintenance`.`id_classification` AS `id_classification`,
+    year(`cars`.`maintenance`.`date_col`) AS `year`,
+    month(`cars`.`maintenance`.`date_col`) AS `month`,
+    dayofmonth(`cars`.`maintenance`.`date_col`) AS `day`,
+    dayname(`cars`.`maintenance`.`date_col`) AS `weekday`,
+    quarter(`cars`.`maintenance`.`date_col`) AS `Q`
+from
+    (`cars`.`maintenance`
+join `cars`.`cars` on
+    ((`cars`.`cars`.`id_car` = `cars`.`maintenance`.`id_car`)))
+order by
+    `cars`.`maintenance`.`date_col` desc;
+
+-- cars.REFUEL source
+
+CREATE OR REPLACE
+ALGORITHM = UNDEFINED VIEW `cars`.`REFUEL` AS
+select
+    `cars`.`fuel`.`ID_FUEL` AS `ID_FUEL`,
+    concat(concat(`cars`.`cars`.`make`, ' '), `cars`.`cars`.`model`) AS `CAR`,
+    `cars`.`fuel`.`DATE_COL` AS `DATE`,
+    `cars`.`fuel`.`KM` AS `KM`,
+    `cars`.`fuel`.`AMOUNT` AS `AMOUNT`,
+    `cars`.`fuel`.`PRICE` AS `PRICE`,
+    `cars`.`fuel`.`TOTAL` AS `TOTAL`,
+    `cars`.`supplier_fuels`.`FUEL_NAME` AS `BRAND`,
+    `cars`.`drive_type`.`DRIVE_TYPE` AS `DRIVE_TYPE`,
+    `cars`.`fuel`.`YEAR_COL` AS `YEAR`,
+    `cars`.`fuel`.`MONTH_COL` AS `MONTH`,
+    `cars`.`fuel`.`DAY_COL` AS `DAY`,
+    `cars`.`fuel`.`WEEKDAY_COL` AS `WEEKDAY`,
+    `cars`.`fuel`.`MILEAGE` AS `MILEAGE`,
+    `cars`.`fuel`.`PERIOD` AS `PERIOD`
+from
+    (((`cars`.`fuel`
+join `cars`.`cars` on
+    ((`cars`.`fuel`.`ID_CAR` = `cars`.`cars`.`id_car`)))
+join `cars`.`drive_type` on
+    ((`cars`.`fuel`.`ID_DRIVE_TYPE` = `cars`.`drive_type`.`ID_DRIVE_TYPE`)))
+join `cars`.`supplier_fuels` on
+    ((`cars`.`supplier_fuels`.`ID_BRAND` = `cars`.`fuel`.`ID_BRAND`)))
+order by
+    `cars`.`fuel`.`DATE_COL` desc;
+
+-- cars.V_FUEL_DST_FROM_AVERAGE source
+
+CREATE OR REPLACE
+ALGORITHM = UNDEFINED VIEW `cars`.`V_FUEL_DST_FROM_AVERAGE` AS
+select
+    `f`.`YEAR_COL` AS `YEAR`,
+    `f`.`MONTH_COL` AS `MONTH`,
+    round(((sum(`f`.`AMOUNT`) - (select `cars`.`vfms`.`AVG_AMOUNT` from `cars`.`V_FUEL_MONTHLY_STATS` `vfms` where (`cars`.`vfms`.`MONTH` = `f`.`MONTH_COL`))) / (select `cars`.`vfms`.`STD_AMOUNT` from `cars`.`V_FUEL_MONTHLY_STATS` `vfms` where (`cars`.`vfms`.`MONTH` = `f`.`MONTH_COL`))), 2) AS `DST_AMOUNT`,
+    round(((sum(`f`.`MILEAGE`) - (select `cars`.`vfms`.`AVG_MILEAGE` from `cars`.`V_FUEL_MONTHLY_STATS` `vfms` where (`cars`.`vfms`.`MONTH` = `f`.`MONTH_COL`))) / (select `cars`.`vfms`.`STD_MILEAGE` from `cars`.`V_FUEL_MONTHLY_STATS` `vfms` where (`cars`.`vfms`.`MONTH` = `f`.`MONTH_COL`))), 2) AS `DST_MILEAGE`,
+    round(((sum(`f`.`TOTAL`) - (select `cars`.`vfms`.`AVG_TOTAL` from `cars`.`V_FUEL_MONTHLY_STATS` `vfms` where (`cars`.`vfms`.`MONTH` = `f`.`MONTH_COL`))) / (select `cars`.`vfms`.`STD_TOTAL` from `cars`.`V_FUEL_MONTHLY_STATS` `vfms` where (`cars`.`vfms`.`MONTH` = `f`.`MONTH_COL`))), 2) AS `DST_TOTAL`
+from
+    `cars`.`fuel` `f`
+group by
+    `f`.`YEAR_COL`,
+    `f`.`MONTH_COL`
+order by
+    `f`.`YEAR_COL` desc,
+    `f`.`MONTH_COL`;
+
+-- cars.V_FUEL_MONTHLY_STATS source
+
+CREATE OR REPLACE
+ALGORITHM = UNDEFINED VIEW `cars`.`V_FUEL_MONTHLY_STATS` AS
+select
+    `t1`.`MONTH` AS `MONTH`,
+    round(avg(`t1`.`AMOUNT`), 3) AS `AVG_AMOUNT`,
+    round(std(`t1`.`AMOUNT`), 3) AS `STD_AMOUNT`,
+    round(avg(`t1`.`MILEAGE`), 3) AS `AVG_MILEAGE`,
+    round(std(`t1`.`MILEAGE`), 3) AS `STD_MILEAGE`,
+    round(avg(`t1`.`TOTAL`), 3) AS `AVG_TOTAL`,
+    round(std(`t1`.`TOTAL`), 3) AS `STD_TOTAL`
+from
+    (
+    select
+        `f`.`YEAR_COL` AS `YEAR`,
+        `f`.`MONTH_COL` AS `MONTH`,
+        sum(`f`.`AMOUNT`) AS `AMOUNT`,
+        sum(`f`.`MILEAGE`) AS `MILEAGE`,
+        sum(`f`.`TOTAL`) AS `TOTAL`
+    from
+        `cars`.`fuel` `f`
+    group by
+        `f`.`YEAR_COL`,
+        `f`.`MONTH_COL`
+    order by
+        `f`.`YEAR_COL` desc,
+        `f`.`MONTH_COL`) `t1`
+group by
+    `t1`.`MONTH`
+order by
+    `t1`.`MONTH`;
